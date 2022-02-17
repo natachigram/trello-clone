@@ -22,14 +22,21 @@ export const NavLinks = styled.div`
 `;
 
 export const Button = styled.button`
-  border: none;
+  border: 2px solid #00243a;
   cursor: pointer;
-  background-color: #014a76;
-  color: #fff;
+  background-color: transparent;
+  color: #00243a;
+  font-weight: 600;
   padding: 0.5rem 1rem;
   margin-right: 1rem;
   border-radius: 4px;
   width: ${(props) => props.width};
+  transition: 0.35s ease-in-out;
+
+  &:hover {
+    background-color: #00243a;
+    color: #fff;
+  }
 `;
 
 export const Input = styled.input`

@@ -15,11 +15,19 @@ const CreateModal = (props) => {
     setShowForm(!showForm);
   };
 
+  //  this function creates a new board
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  //  this function creates a new board
+
   return (
     <>
       <Modal>
         <Heading>
-          Create Board <span onClick={props.onClick}>X</span>
+          Create Board <span onClick={props.onClick}>x</span>
         </Heading>
         <ModalText onClick={handleShowForm}>
           <p>
@@ -28,8 +36,8 @@ const CreateModal = (props) => {
           </p>
         </ModalText>
         {showForm ? (
-          <Form>
-            <Input placeholder='Board Title' />
+          <Form onSubmit={handleSubmit}>
+            <Input placeholder='Board Title' required />
             <Textarea placeholder='Description'></Textarea>
             <Button width='100%'>Save</Button>
           </Form>

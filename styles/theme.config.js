@@ -17,7 +17,7 @@ li{
 }
 
 body {
-   
+   background-color: #f7f7f8;
    font-weight: 400;
    font-style: normal;
    transition: all 0.50s linear;

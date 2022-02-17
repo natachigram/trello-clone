@@ -8,13 +8,14 @@ export const Modal = styled.div`
   flex-direction: column;
   justify-content: space-between;
   top: 300%;
-  left: 40%;
-  background-color: #fff;
-  box-shadow: 3px 7px 20px -5px rgba(0, 0, 0, 0.34);
-  -webkit-box-shadow: 3px 7px 20px -5px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: 3px 7px 20px -5px rgba(0, 0, 0, 0.34);
-  max-height: 16rem;
-  width: 16rem;
+  left: 37%;
+  right: 35%;
+  border-radius: 14px;
+  border-radius: 14px;
+  background: #f7f7f8;
+  box-shadow: 7px 7px 14px #bcbcbc, -7px -7px 14px #ffffff;
+  max-height: 20rem;
+  width: 23%;
   border-radius: 4px;
   padding: 0.8rem;
   font-family: 'Poppins', sans-serif;
@@ -42,6 +43,10 @@ export const ModalText = styled.div`
   flex: 0.4;
   cursor: pointer;
   margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
+  transition: 0.25s ease-in-out;
 
   p,
   h4 {
@@ -55,7 +60,7 @@ export const ModalText = styled.div`
   }
 
   &:hover {
-    background-color: #f3f9ff;
+    background-color: #e8e8e8;
   }
 `;
 
@@ -66,11 +71,12 @@ export const Form = styled.form`
   height: 100%;
 `;
 export const Input = styled.input`
-  background-color: #e5e5e5;
   outline: none;
   height: 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  background: #f7f7f8;
+  box-shadow: inset 8px 8px 22px #e3e3e4, inset -8px -8px 22px #ffffff;
   width: 100%;
   padding: 0 0.5rem;
   margin-bottom: 0.5rem;
@@ -89,8 +95,9 @@ export const Textarea = styled.textarea`
   min-height: 2rem;
   min-width: 100%;
   border: none;
-  border-radius: 4px;
-  background-color: #e5e5e5;
+  border-radius: 5px;
+  background: #f7f7f8;
+  box-shadow: inset 8px 8px 22px #e3e3e4, inset -8px -8px 22px #ffffff;
   transition: 0.25s ease-in-out;
 
   &:focus {

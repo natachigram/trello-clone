@@ -4,7 +4,7 @@ import CreateModal from './CreateModal';
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(true);
-  const handleOpen = () => setShowModal(false);
+  const handleOpen = () => setShowModal(!showModal);
   const handleClose = () => setShowModal(true);
 
   return (
