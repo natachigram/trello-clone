@@ -1,13 +1,30 @@
 import Head from 'next/head';
-import Board from '../components/Board';
 import { Container } from '../styles/IndexStyled';
-
-export default function Home() {
+import { getBoards } from '../utils/actions';
+import { Box } from '../styles/BoardStyled';
+export default function Home({ boards }) {
   return (
     <>
       <Container>
-        <Board />
+        {boards.map((board) => {
+          return (
+            <Box key={board.id}>
+              <h4>{board.title}</h4>
+              <p>{board.body}</p>
+            </Box>
+          );
+        })}
       </Container>
     </>
   );
+}
+
+export async function getServerSideProps(ctx) {
+  const boards = JSON.parse(JSON.stringify(await getBoards()));
+
+  return {
+    props: {
+      boards,
+    },
+  };
 }

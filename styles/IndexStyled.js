@@ -6,5 +6,15 @@ export const Container = styled.div`
   margin: 0 8rem;
   padding-top: 1rem;
   height: 92vh;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  flex: wrap;
+
+  h4 {
+    text-transform: capitalize;
+  }
+
+  p {
+    text-transform: sentence;
+  }
 `;
