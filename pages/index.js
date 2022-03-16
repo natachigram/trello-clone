@@ -10,7 +10,8 @@ export default function Home({ boards }) {
           return (
             <Box key={board.id}>
               <h4>{board.title}</h4>
-              <p>{board.body}</p>
+              <p> {board.body}</p>
+              <button>Completed</button>
             </Box>
           );
         })}
